@@ -7,5 +7,3 @@ AutoDM();
 const AutoTweet = require("./src/AutoTweet.js");
 
 console.log("AutoTweet App started successfully 🙌🙌");
-
-AutoTweet();
