@@ -48,18 +48,5 @@ var greetings = [
       //console.log(response);
     }
   };
-  
-  //Post second tweet!
-  T.post('statuses/update', { status: tweet_2 }, tweeted);
-
-  // Callback for when the tweet is sent
-  function tweeted(err, data, response) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('second tweet Success: ' + data.text);
-      //console.log(response);
-    }
-  };
 
 }
