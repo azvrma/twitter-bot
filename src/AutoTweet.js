@@ -22,9 +22,8 @@ setInterval(tweeter, 20*1000);
 function tweeter() {
 
   // This is a random number bot
-  var tweet_1= '300% ROI\nDM to Learn More or\nVisit:- https://goo.gl/KEuDno\n#InvestmentOpportunity';
-  var tweet_2= 'Hello';
-  
+  var myArray = ['January', 'February', 'March']; 
+var tweet = myArray[(Math.random() * myArray.length) | 0]
  /* function getRandom(arr){
   var rand = Math.random();
   return arr[Math.floor(rand *arr.length)];
@@ -38,7 +37,7 @@ var greetings = [
     randomGreeting = getRandom(greetings);*/
   
   // Post that tweet!
-  T.post('statuses/update', { status: tweet_1 }, tweeted);
+  T.post('statuses/update', { status: tweet }, tweeted);
 
   // Callback for when the tweet is sent
   function tweeted(err, data, response) {
