@@ -16,7 +16,7 @@ const my_user_name = require("../config").userName;
 tweeter();
 
 // Once every N milliseconds
-setInterval(tweeter, 20*1000);
+setInterval(tweeter, 10*1000);
 
 // Here is the bot!
 function tweeter() {
