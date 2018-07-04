@@ -1,6 +1,6 @@
 const T = require("./Twit.js");
 const my_user_name = require("../config").userName;
-const timeout = 1000 * 01 ; // timeout to send the message 5 min
+const timeout = 1000 * 60 * 60 ; // timeout to send the message 5 min
 
 const AutoDM = () => {
   const stream = T.stream("user");
@@ -30,20 +30,7 @@ const SendMessage = user => {
   }
 };
 const GenerateMessage = name => {
-  return `Hello ${name},\n
-\n
-Thanks for following me I am interested in Earning Money Online and I am building by online business that will be focus on the Keywork #EarnMoneyOnline.\n
-\n
-Please see my offer:- https://goo.gl/KEuDno\n
-\n
-What are you interested in ? \n
-I would like to assist you in any way that I can.\n
-I am also looking for an Investor to Fund my Online Business.\n
-\n
-I would also like you to know that you can learn more about my Online Business, just visit:- https://www.atmauphillips.com\n
-\n
-Please let me know how I can assist you or if you can assist me. \n
-Thanks again for Following Me I Appreciate It`; 
+  return `Hello ${name} `; 
   /*const days = [
     "Sunday",
     "Monday",
