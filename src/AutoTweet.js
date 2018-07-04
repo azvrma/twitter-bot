@@ -16,15 +16,16 @@ const my_user_name = require("../config").userName;
 tweeter();
 
 // Once every N milliseconds
-setInterval(tweeter, 60*1000);
+setInterval(tweeter, 20*1000);
 
 // Here is the bot!
 function tweeter() {
 
   // This is a random number bot
-  //var tweet_1= 'Hello';
+  var tweet_1= '300% ROI\nDM to Learn More or\nVisit:- https://goo.gl/KEuDno\n#InvestmentOpportunity';
+  var tweet_2= 'Hello';
   
-  function getRandom(arr){
+ /* function getRandom(arr){
   var rand = Math.random();
   return arr[Math.floor(rand *arr.length)];
 }
@@ -34,10 +35,10 @@ var greetings = [
         "Hi", 
         "Hey"
     ],
-    randomGreeting = getRandom(greetings);
+    randomGreeting = getRandom(greetings);*/
   
   // Post that tweet!
-  T.post('statuses/update', { status: randomGreeting }, tweeted);
+  T.post('statuses/update', { status: tweet_1 }, tweeted);
 
   // Callback for when the tweet is sent
   function tweeted(err, data, response) {
@@ -45,6 +46,19 @@ var greetings = [
       console.log(err);
     } else {
       console.log('Success: ' + data.text);
+      //console.log(response);
+    }
+  };
+  
+  //Post second tweet!
+  T.post('statuses/update', { status: tweet_2 }, tweeted);
+
+  // Callback for when the tweet is sent
+  function tweeted(err, data, response) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('second tweet Success: ' + data.text);
       //console.log(response);
     }
   };
