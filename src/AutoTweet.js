@@ -16,16 +16,19 @@ const my_user_name = require("../config").userName;
 tweeter();
 
 // Once every N milliseconds
-setInterval(tweeter, 60*5*1000);
+setInterval(tweeter, 30*1000);
 
 // Here is the bot!
 function tweeter() {
 
   // This is a random number bot
-  var tweet = 'Here\'s a random number between 0 and 100: ' + Math.floor(Math.random()*100);
+  var tweet_1= 'Hello';
+  var tweet_2= 'Hi';
+  var tweet_3= 'Hey';
+  var tweet_4= 'Namastey';
   
   // Post that tweet!
-  T.post('statuses/update', { status: tweet }, tweeted);
+  T.post('statuses/update', { status: tweet_1, tweet_2, tweet_3, tweet_4 }, tweeted);
 
   // Callback for when the tweet is sent
   function tweeted(err, data, response) {
