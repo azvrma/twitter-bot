@@ -1,12 +1,16 @@
 // Using the Twit node package
 // https://github.com/ttezel/twit
-var Twit = require('twit');
+//var Twit = require('twit');
 
 // Pulling all my twitter account info from another file
-var config = require('./config.js');
+//var config = require('./config.js');
 
 // Making a Twit object for connection to the API
-var T = new Twit(config);
+//var T = new Twit(config);
+
+const T = require("./Twit.js");
+const my_user_name = require("../config").userName;
+//const timeout = 1000 * 60 * 60 ; // timeout to send the message 60 min
 
 // Start once
 tweeter();
