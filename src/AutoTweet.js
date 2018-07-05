@@ -22,8 +22,16 @@ setInterval(tweeter, 10*1000);
 function tweeter() {
 
   // This is a random number bot
-  var myArray = ['January', 'February', 'March']; 
-var tweet = myArray[(Math.random() * myArray.length) | 0]
+  var myArray = ['\nJanuary', '\nFebruary', '\nMarch']; 
+var msg = myArray[(Math.random() * myArray.length) | 0]
+
+var d = new Date();
+d = d.toString().replace(/UTC\s/,"");
+d = d.replace(/GMT.+/,"");
+    
+    var tweet = d.concat(msg);
+
+
  /* function getRandom(arr){
   var rand = Math.random();
   return arr[Math.floor(rand *arr.length)];
